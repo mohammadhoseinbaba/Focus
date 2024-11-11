@@ -1,0 +1,52 @@
+.Focus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin: auto;
+
+    .mainpart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        border-radius: 10px;
+        border: 1px solid white;
+        padding: 40px;
+        .buttons {
+            button {
+                border: none;
+                color: white;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                margin: 1px 20px 20px;
+                cursor: pointer;
+            }
+        }
+
+        .buttonmain {
+            color: tomato;
+            background-color: white;
+            padding: 30px 100px;
+            border: none;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .timer {
+            color: white;
+            font-size: 150px;
+        }
+
+    }
+
+    .counter{
+        color: white;
+    }
+    .Timesay{
+        color: white;
+    }
+}
