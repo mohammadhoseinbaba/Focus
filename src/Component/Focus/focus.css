@@ -1,52 +1,57 @@
-.Focus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 700px;
-    margin: auto;
-
-    .mainpart {
+    .Focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px;
-        border-radius: 10px;
-        border: 1px solid white;
-        padding: 40px;
-        .buttons {
-            button {
+        width: 700px;
+        margin: auto;
+
+        .mainpart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.1);
+
+            .buttons {
+                background-color: transparent;
+
+                button {
+                    border: none;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    background-color: transparent;
+                    margin: 0px 15px;
+                    font-size: 15px
+                }
+            }
+
+            .buttonmain {
+                color: tomato;
+                background-color: white;
+                padding: 30px 100px;
                 border: none;
-                color: white;
-                padding: 20px;
-                background-color: rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
-                margin: 1px 20px 20px;
+                font-size: 30px;
+                font-weight: bold;
                 cursor: pointer;
             }
+
+            .timer {
+                color: white;
+                font-size: 150px;
+                background-color: transparent;
+            }
+
         }
 
-        .buttonmain {
-            color: tomato;
-            background-color: white;
-            padding: 30px 100px;
-            border: none;
-            border-radius: 10px;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .timer {
+        .counter {
             color: white;
-            font-size: 150px;
         }
 
+        .Timesay {
+            color: white;
+        }
     }
-
-    .counter{
-        color: white;
-    }
-    .Timesay{
-        color: white;
-    }
-}

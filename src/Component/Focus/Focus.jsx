@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './focus.css'
 
 const Focus = () => {
@@ -7,8 +7,6 @@ const Focus = () => {
   const handleStart = () => {
     setIsStart(!isStart)
   }
-
-
 
   return (
     <div className='Focus'>

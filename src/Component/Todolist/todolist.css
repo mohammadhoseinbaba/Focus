@@ -14,16 +14,42 @@
         }
     }
 
+    .middle {
+        .result {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            border-radius: 15px;
+
+            p {
+                background-color: transparent;
+                font-size: 20px;
+                margin-left: 15px;
+            }
+
+            .right {
+                display: flex;
+                gap: 20px;
+                background-color: transparent;
+
+                img {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
     .down {
         display: flex;
         justify-content: center;
 
         .Addtask {
-            border: 1px solid white;
-            color: tomato;
-            background-color: white;
+            border: 1px dashed;
+            color: white;
+            background-color: transparent;
             margin-top: 50px;
-            padding: 20px;
+            padding: 35px 150px;
             border-radius: 10px;
             font-size: 20px;
             font-weight: bold;
