@@ -2,7 +2,8 @@ import './todolist.css'
 
 const TodoList = () => {
   const handleClick = () => {
-
+    let box=document.getElementById('box')
+    box.classList.toggle('yesdisplay')
   }
 
   return (
@@ -19,14 +20,14 @@ const TodoList = () => {
           </div>
 
         </div>
-        <div className="box">
-          <form>
-          <input  className='first' type="text" placeholder='what are you working on?' />
-          <label htmlFor="">Estimated Pomodoro</label>
-          <input type="number" placeholder='Number' />  
-          <div className='buttons'>
-          <button className='cancel'>cancel</button>
-          <button>save</button>
+          <div className="box" id='box'>
+            <form>
+            <input  className='first' type="text" placeholder='what are you working on?' />
+            <label htmlFor="">Estimated Pomodoro</label>
+            <input type="number" placeholder='Number' />  
+            <div className='buttons'>
+            <button className='cancel'>cancel</button>
+            <button>save</button>
           </div>
           </form>
         </div>

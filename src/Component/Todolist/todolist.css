@@ -41,13 +41,15 @@
                     cursor: pointer;
                     border: 1px solid gray;
                     border-radius: 10px;
-                    margin-right:10px ;
+                    margin-right: 10px;
                 }
             }
 
         }
 
         .box {
+            display: none;
+            position: absolute;
             form {
                 display: flex;
                 flex-direction: column;
@@ -71,7 +73,8 @@
                     background-color: transparent;
                     font-size: 20px;
                 }
-                input{
+
+                input {
                     background-color: whitesmoke;
                     padding: 10px;
                 }
@@ -82,7 +85,7 @@
                     background-color: transparent;
                     padding: 20px;
 
-                    button{
+                    button {
                         padding: 10px;
                         border: none;
                         border-radius: 10px;
@@ -92,6 +95,9 @@
                 }
             }
         }
+        .yesdisplay{
+            display: block;
+        }
     }
 
 
@@ -99,7 +105,8 @@
     .down {
         display: flex;
         justify-content: center;
-margin-bottom: 50px;
+        margin-bottom: 50px;
+
         .Addtask {
             border: 1px dashed;
             color: white;
