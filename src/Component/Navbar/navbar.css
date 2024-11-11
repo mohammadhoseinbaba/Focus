@@ -28,9 +28,20 @@
             align-items: center;
             gap: 5px;
             cursor: pointer;
-            img{
-                width: 20px;
-                height: 20px;
+
+        }
+
+        .more {
+            img {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.15);
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px;
             }
         }
     }

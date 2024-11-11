@@ -15,15 +15,20 @@ const TodoList = () => {
         <div className="result">
           <p>the job to do</p>
           <div className='right'><p>0/4</p>
-            <img src="more.png" alt="" />
+            <img src="moregray.png" alt="" />
           </div>
 
         </div>
         <div className="box">
-          <input type="text" />
-          <input type="number" />
+          <form>
+          <input  className='first' type="text" placeholder='what are you working on?' />
+          <label htmlFor="">Estimated Pomodoro</label>
+          <input type="number" placeholder='Number' />  
+          <div className='buttons'>
+          <button className='cancel'>cancel</button>
           <button>save</button>
-          <button>cancel</button>
+          </div>
+          </form>
         </div>
 
       </div>
