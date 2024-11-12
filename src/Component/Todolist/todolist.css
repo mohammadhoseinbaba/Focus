@@ -16,12 +16,17 @@
 
     .middle {
         .result {
-            background-color: white;
             display: flex;
             justify-content: space-between;
             margin: 20px 0px;
             border-radius: 15px;
+            li{
+                display: flex;
+                margin: 10px;
+                background-color: white;
+                gap: 10px;
 
+            }
             p {
                 background-color: transparent;
                 font-size: 20px;
@@ -50,6 +55,8 @@
         .box {
             display: none;
             position: absolute;
+            left: 46rem;
+            top: 44rem;
             form {
                 display: flex;
                 flex-direction: column;
