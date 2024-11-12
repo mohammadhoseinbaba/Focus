@@ -20,20 +20,27 @@
             justify-content: space-between;
             border-radius: 15px;
             margin: 20px 0;
-ul{
-           position: relative;
-}
-            li {
-                display: flex;
-                flex-direction: column;
-                background-color: white;
-                width: 35rem;
-                padding: 20px;
-                font-size: 30px;
-                border-radius: 20px;
-                margin-bottom: 10px;
-            }
 
+            ul {
+                position: relative;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    width: 35rem;
+                    padding: 20px;
+                    font-size: 30px;
+                    border-radius: 20px;
+                    margin-bottom: 10px;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    span {
+                        background-color: transparent;
+                        display: flex;
+                    }
+                }
+            }
         }
 
         .box {

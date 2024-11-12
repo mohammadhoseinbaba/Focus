@@ -38,7 +38,7 @@ const TodoList = () => {
           <ul id='myul'>
             {task.map((task, index) => (
               <li key={index}>
-                {task.text} <span>{task.estimate}</span>
+                {task.text} <span>0/{task.estimate}</span>
               </li>
             ))}
           </ul>
