@@ -4,17 +4,10 @@ import './todolist.css'
 const TodoList = () => {
   const [whatTodo, SetWhatTodo] = useState('')
   const [estimateNumber, setEstimateNumber] = useState('')
+const [isShown,setIsShown]=useState(true)
 
   const handleSubmit = () => {
-    let li = document.createElement('li');
-    let T = document.createTextNode(whatTodo)
-    li.appendChild(T);
-    if (whatTodo === '') {
-      alert('Enter your text')
-    } else {
-      document.getElementById('myul').appendChild(li)
-    }
-    SetWhatTodo('')
+
   }
 
   const handleChange = (event) => {
@@ -26,9 +19,8 @@ const TodoList = () => {
   }
 
   const handleClick = () => {
-    let box = document.getElementById('box')
-    box.classList.toggle('yesdisplay')
-  }
+    setIsShown(!isShown)
+    }
 
   return (
     <div className='Todolist'>
@@ -41,12 +33,8 @@ const TodoList = () => {
           <ul id='myul'>
 
           </ul>
-          <div className='right'><p>0/{estimateNumber}</p>
-            <img src="moregray.png" alt="" />
-          </div>
-
         </div>
-        <div className="box" id='box'>
+        <div className={isShown? 'box': 'box yesdisplay'} id='box'>
           <form onClick={handleForm}>
             <input className='first' type="text" placeholder='what are you working on?' onChange={handleChange} value={whatTodo} />
             <label htmlFor="">Estimated Pomodoro</label>

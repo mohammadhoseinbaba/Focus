@@ -18,36 +18,20 @@
         .result {
             display: flex;
             justify-content: space-between;
-            margin: 20px 0px;
             border-radius: 15px;
-            li{
+            margin: 20px 0;
+ul{
+           position: relative;
+}
+            li {
                 display: flex;
-                margin: 10px;
+                flex-direction: column;
                 background-color: white;
-                gap: 10px;
-
-            }
-            p {
-                background-color: transparent;
-                font-size: 20px;
-                margin-left: 15px;
-            }
-
-            .right {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                background-color: transparent;
-
-                img {
-                    background-color: transparent;
-                    width: 40px;
-                    height: 40px;
-                    cursor: pointer;
-                    border: 1px solid gray;
-                    border-radius: 10px;
-                    margin-right: 10px;
-                }
+                width: 35rem;
+                padding: 20px;
+                font-size: 30px;
+                border-radius: 20px;
+                margin-bottom: 10px;
             }
 
         }
@@ -56,7 +40,8 @@
             display: none;
             position: absolute;
             left: 46rem;
-            top: 44rem;
+            top: 46rem;
+
             form {
                 display: flex;
                 flex-direction: column;
@@ -102,7 +87,8 @@
                 }
             }
         }
-        .yesdisplay{
+
+        .yesdisplay {
             display: block;
         }
     }
