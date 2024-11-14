@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "user1",
+            "password": "password1",
+            "timer": {
+                "pomodoro": 25,
+                "shortBreak": 5,
+                "longBreak": 15
+            }
+        },
+        {
+            "id": 1,
+            "username": "user1",
+            "password": "password1",
+            "timer": {
+                "pomodoro": 25,
+                "shortBreak": 5,
+                "longBreak": 15
+            }
+        }
+    ]
+}
