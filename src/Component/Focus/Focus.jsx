@@ -3,12 +3,13 @@ import './focus.css'
 
 const Focus = () => {
 
+  const [isRunning, setIsRunning] = useState(false)
 
 
   const Timer = () => {
     const [timeLeft, setTimeLeft] = useState(25 * 60)
-    const [isRunning, setIsRunning] = useState(false)
     const [timerMode, setTimerMode] = useState('pomodoro')
+
     useEffect(() => {
       let interval;
       if (isRunning) {
@@ -36,10 +37,10 @@ const Focus = () => {
 
   const handlePomodoro = () => {
     setTimerMode('pomodoro')
-    setTimeLeft(25*60)
+    setTimeLeft(25 * 60)
     setIsRunning(false)
-      }
-      
+  }
+
 
   return (
     <div className='Focus'>
@@ -51,7 +52,7 @@ const Focus = () => {
         </div>
         <div className="timer"><Timer /></div>
         <div className="contorols" >
-          {!isRunning ? (<button className='buttonmain' onClick={() => { setIsRunning(true) }}>Start</button>) : (<button className='buttonmain' onClick={() => { setIsRunning(false) }}>Stop</button>)}
+          {!isRunning ? (<button className='buttonmain' onClick={()=>{setIsRunning(true)}}>Start</button>) : (<button className='buttonmain' onClick={()=>{setIsRunning(false)}}>Stop</button>)}
         </div>
       </div>
       <div className="counter">#1</div>
