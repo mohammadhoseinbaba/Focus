@@ -4,35 +4,30 @@ import './focus.css'
 const Focus = () => {
 
   const [isRunning, setIsRunning] = useState(false)
+  const [timerMode, setTimerMode] = useState('pomodoro')
+  const [timeLeft, setTimeLeft] = useState(25 * 60)
 
-
-  const Timer = () => {
-    const [timeLeft, setTimeLeft] = useState(25 * 60)
-    const [timerMode, setTimerMode] = useState('pomodoro')
-
-    useEffect(() => {
-      let interval;
-      if (isRunning) {
-        interval = setInterval(() => {
-          setTimeLeft((prevTime) => {
-            if (prevTime <= 0) {
-              clearInterval(interval) //clear the interval when the time is reached up
-              return 0;
-            }
-            return prevTime - 1 //decrement the time by one second
-          })
-        }, 1000);
-      }
-      return () => clearInterval(interval)
-    }, [isRunning])
-
-    const formatTime = (time) => {
-      const minutes = Math.floor(time / 60)
-      const seconds = time % 60
-      return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  useEffect(() => {
+    let interval;
+    if (isRunning) {
+      interval = setInterval(() => {
+        setTimeLeft((prevTime) => {
+          if (prevTime <= 0) {
+            clearInterval(interval) //clear the interval when the time is reached up
+            return 0;
+          }
+          return prevTime - 1 //decrement the time by one second
+        })
+      }, 1000);
     }
+    return () => clearInterval(interval)
+  }, [isRunning])
 
-    return <div>{formatTime(timeLeft)}</div>
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60)
+    const seconds = time % 60
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   }
 
   const handlePomodoro = () => {
@@ -40,19 +35,28 @@ const Focus = () => {
     setTimeLeft(25 * 60)
     setIsRunning(false)
   }
+  const handleShortBreak = () => {
+    setTimerMode('ShortBreak')
+    setTimeLeft(15 * 60)
+    setIsRunning(false)
+  }
 
-
+  const handleBreak = () => {
+    setTimerMode('Break')
+    setTimeLeft(5 * 60)
+    setIsRunning(false)
+  }
   return (
     <div className='Focus'>
       <div className="mainpart">
         <div className="buttons">
           <button type='button' onClick={handlePomodoro}>Pomodoro</button>
-          <button>Short Break</button>
-          <button>Long Break</button>
+          <button type='button' onClick={handleShortBreak}>Short Break</button>
+          <button type='button' onClick={handleBreak}>Long Break</button>
         </div>
-        <div className="timer"><Timer /></div>
+        <div className="timer">{formatTime(timeLeft)}</div>
         <div className="contorols" >
-          {!isRunning ? (<button className='buttonmain' onClick={()=>{setIsRunning(true)}}>Start</button>) : (<button className='buttonmain' onClick={()=>{setIsRunning(false)}}>Stop</button>)}
+          {!isRunning ? (<button className='buttonmain' onClick={() => { setIsRunning(true) }}>Start</button>) : (<button className='buttonmain' onClick={() => { setIsRunning(false) }}>Stop</button>)}
         </div>
       </div>
       <div className="counter">#1</div>
