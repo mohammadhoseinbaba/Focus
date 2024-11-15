@@ -56,7 +56,7 @@ const Focus = () => {
         </div>
         <div className="timer">{formatTime(timeLeft)}</div>
         <div className="contorols" >
-          <button onClick={()=>{setIsRunning(!isRunning)}}>{ isRunning ?'Pause':'Start'}</button>
+          {!isRunning ? (<button className='buttonmain' onClick={() => { setIsRunning(true) }}>Start</button>) : (<button className='buttonmain' onClick={() => { setIsRunning(false) }}>Stop</button>)}
         </div>
       </div>
       <div className="counter">#1</div>
