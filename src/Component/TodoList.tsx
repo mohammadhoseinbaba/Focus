@@ -1,5 +1,5 @@
 import React, { FormEvent, useState, ChangeEvent } from 'react'
-import './todolist.css'
+import './UI/todolist.css'
 
 interface Task {
   text: string;

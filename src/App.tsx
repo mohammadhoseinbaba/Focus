@@ -1,6 +1,6 @@
-import TodoList from "./Component/Todolist/TodoList"
-import Navbar from './Component/Navbar/Navbar'
-import Focus from './Component/Focus/Focus'
+import TodoList from "./Component/TodoList"
+import Navbar from './Component/Navbar'
+import Focus from './Component/Focus'
 
 const App:React.FC = () => {
   return (

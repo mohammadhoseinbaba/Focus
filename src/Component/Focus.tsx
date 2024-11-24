@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './focus.css'
+import './UI/focus.css'
 
 const Focus :React.FC= () => {
 
@@ -8,7 +8,7 @@ const Focus :React.FC= () => {
   const [timeLeft, setTimeLeft] = useState<number>(25 * 60)
 
   useEffect(() => {
-    let interval:NodeJS.Timeout|undefined;
+    let interval: NodeJS.Timeout | undefined;
     if (isRunning) {
       interval = setInterval(() => {
         setTimeLeft((prevTime) => {
